@@ -1,0 +1,31 @@
+package sorteio.loteria;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+/**
+ * @author Alex
+ *
+ */
+public class Sorteio {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> lista = new ArrayList<>();
+		
+		Random numSoteado = new Random();
+		 int i = 0;
+		while(i < 6) {
+			int getNumSoteado = numSoteado.nextInt()*60;
+			
+			System.out.print(getNumSoteado + " ");
+			
+			if(!lista.contains(getNumSoteado)) {
+				lista.add(getNumSoteado);
+				i++;
+			}
+		}
+		System.out.println("\nNúmeros Sorteados: " + lista);
+	}
+
+}
